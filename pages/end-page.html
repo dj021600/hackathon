@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ScriptEd Advanced Hackathon</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Your CSS Linked Below-->
+  <link rel="stylesheet" href="../css/end-page.css">
+  <!-- jQuery Linked Below-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap Javascript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Your Javascript Linked Below-->
+  <script src="../js/start-animation.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+  <script>
+    $(document).ready(function(){
+      var string = window.location.href.split('?');
+      var planetName = string[1].split('=');
+      
+      planetName = planetName[1];
+      $(".welcome").text("Welcome to " + planetName + "!");
+      $("#planetImg").attr("src", "../images/Planets/" + planetName + ".png")
+      var table = data.data.table;
+      for (t in table) {
+          if (table[t].entry.name == planetName){
+              $('#latitude').text(table[t].cells[0].position.alt_az.alt.deg);
+              $('#longitude').text(table[t].cells[0].position.alt_az.az.deg);
+              $('#distance').text(table[t].cells[0].distance.from_earth.km);
+          }
+      }
+     var data = {
+        "data": {
+            "dates": {
+                "from": "2018-03-17T00:00:00",
+                "to": "2018-03-17T23:59:59"
+            },
+            "observer": {
+                "geo": {
+                    "lat": "40.730610",
+                    "lon": "-73.935242"
+                }
+            },
+            "table": {
+                "header": [
+                    "2018-03-17T00:00:00"
+                ],
+                "rows": [{
+                        "cells": [{
+                            "date": "2018-03-17T00:00:00",
+                            "distance": {
+                                "from_earth": {
+                                    "au": 0.99495079450354762,
+                                    "km": 148842520.30900398
+                                },
+                                "from_sun": {
+                                    "au": 0,
+                                    "km": 0
+                                }
+                            },
+                            "extra_info": {
+                                "elong": 0,
+                                "mag": -26.8,
+                                "radi": 0.004675331685629812,
+                                "sz": 1928.7127685546875
+                            },
+                            "id": "sun",
+                            "name": "Sun",
+                            "position": {
+                                "alt_az": {
+                                    "alt": {
+                                        "deg": -11.485938042122337,
+                                        "str": "-11deg 29' 09.4\""
+                                    },
+                                    "az": {
+                                        "deg": 278.09125082323089,
+                                        "str": "278deg 05' 28.5\""
+                                    }
+                                },
+                                "constellation": {
+                                    "abbr": "Psc",
+                                    "id": "psc",
+                                    "name": "Pisces"
+                                },
+                                "ra_dec": {
+                                    "dec": {
+                                        "deg": -1.5558562249705359,
+                                        "str": "-01deg 33' 21.1\""
+                                    },
+                                    "ra": {
+                                        "hr": 23.760693150792292,
+                                        "str": "23h 45m 38.50s"
+                                    }
+                                }
+                            }
+                        }],
+                        "entry": {
+                            "id": "mercury",
+                            "name": "Mercury"
+                        }
+                    },
+                    {
+                        "cells": [{
+                            "date": "2018-03-17T00:00:00",
+                            "distance": {
+                                "from_earth": {
+                                    "au": 1.6248425304989069,
+                                    "km": 243072982.78543627
+                                },
+                                "from_sun": {
+                                    "au": 0.7237830758094788,
+                                    "km": 108276406.98979469
+                                }
+                            },
+                            "extra_info": {
+                                "elong": 0.2844843604120125,
+                                "mag": -3.8,
+                                "radi": 0.000025275030855728354,
+                                "sz": 10.426698684692383
+                            },
+                            "id": "venus",
+                            "name": "Venus",
+                            "position": {
+                                "alt_az": {
+                                    "alt": {
+                                        "deg": 3.541734932163251,
+                                        "str": "03deg 32' 30.2\""
+                                    },
+                                    "az": {
+                                        "deg": 272.20570213894467,
+                                        "str": "272deg 12' 20.5\""
+                                    }
+                                },
+                                "constellation": {
+                                    "abbr": "Psc",
+                                    "id": "psc",
+                                    "name": "Pisces"
+                                },
+                                "ra_dec": {
+                                    "dec": {
+                                        "deg": 3.8830038408772887,
+                                        "str": "+03deg 52' 58.8\""
+                                    },
+                                    "ra": {
+                                        "hr": 0.77348187258789558,
+                                        "str": "00h 46m 24.53s"
+                                    }
+                                }
+                            }
+                        }],
+                        "entry": {
+                            "id": "venus",
+                            "name": "Venus"
+                        }
+                    },
+                    {
+                        "cells": [{
+                            "date": "2018-03-17T00:00:00",
+                            "distance": {
+                                "from_earth": {
+                                    "au": 0.0026249370266432054,
+                                    "km": 392684.98990741267
+                                },
+                                "from_sun": {
+                                    "au": 0.9925525784492493,
+                                    "km": 148483752.29380238
+                                }
+                            },
+                            "extra_info": {
+                                "elong": 0.07212489377450283,
+                                "mag": -5.41,
+                                "radi": 0.004552503737087482,
+                                "sz": 1878.0426025390625
+                            },
+                            "id": "moon",
+                            "name": "Moon",
+                            "position": {
+                                "alt_az": {
+                                    "alt": {
+                                        "deg": -19.491508330510921,
+                                        "str": "-19deg 29' 29.4\""
+                                    },
+                                    "az": {
+                                        "deg": 277.20604155917732,
+                                        "str": "277deg 12' 21.7\""
+                                    }
+                                },
+                                "constellation": {
+                                    "abbr": "Psc",
+                                    "id": "psc",
+                                    "name": "Pisces"
+                                },
+                                "ra_dec": {
+                                    "dec": {
+                                        "deg": -7.4594596666413118,
+                                        "str": "-07deg 27' 34.1\""
+                                    },
+                                    "ra": {
+                                        "hr": 23.394472522134159,
+                                        "str": "23h 23m 40.10s"
+                                    }
+                                }
+                            }
+                        }],
+                        "entry": {
+                            "id": "moon",
+                            "name": "Moon"
+                        }
+                    },
+                    {
+                        "cells": [{
+                            "date": "2018-03-17T00:00:00",
+                            "distance": {
+                                "from_earth": {
+                                    "au": 1.2487275833937634,
+                                    "km": 186806987.56006369
+                                },
+                                "from_sun": {
+                                    "au": 1.550886869430542,
+                                    "km": 232009373.363398
+                                }
+                            },
+                            "extra_info": {
+                                "elong": -1.5192560370605386,
+                                "mag": 0.54,
+                                "radi": 0.000018269207633588956,
+                                "sz": 7.5365891456604
+                            },
+                            "id": "mars",
+                            "name": "Mars",
+                            "position": {
+                                "alt_az": {
+                                    "alt": {
+                                        "deg": -70.38831945130552,
+                                        "str": "-70deg 23' 18.0\""
+                                    },
+                                    "az": {
+                                        "deg": 31.497818361485802,
+                                        "str": "31deg 29' 52.1\""
+                                    }
+                                },
+                                "constellation": {
+                                    "abbr": "Sgr",
+                                    "id": "sgr",
+                                    "name": "Sagittarius"
+                                },
+                                "ra_dec": {
+                                    "dec": {
+                                        "deg": -23.440055517529711,
+                                        "str": "-23deg 26' 24.2\""
+                                    },
+                                    "ra": {
+                                        "hr": 17.952814310521187,
+                                        "str": "17h 57m 10.13s"
+                                    }
+                                }
+                            }
+                        }],
+                        "entry": {
+                            "id": "mars",
+                            "name": "Mars"
+                        }
+                    },
+                    {
+                        "cells": [{
+                            "date": "2018-03-17T00:00:00",
+                            "distance": {
+                                "from_earth": {
+                                    "au": 4.8104192088554392,
+                                    "km": 719628470.81915224
+                                },
+                                "from_sun": {
+                                    "au": 5.419566631317139,
+                                    "km": 810755628.1618158
+                                }
+                            },
+                            "extra_info": {
+                                "elong": -2.1632499339547038,
+                                "mag": -2.13,
+                                "radi": 0.00009934240936219978,
+                                "sz": 40.981685638427734
+                            }
+                        }]
+                    }
+                ]
+            }
+        }
+    };
+    });
+  </script>
+</head>
+<body>
+    <h1>CONGRATULATIONS!</h1>
+    <h2 class="welcome"></h2>
+    <div id="planetPicture">
+        <img id="planetImg" src="">
+    </div>
+    <p class="long">Longitude:<span id='longitude'></span></p>
+    <p class="lati">Latitude:<span id="latitude"></span></p>
+    <p class="dst">Distance from Intrepid (km): <span id = "distance"></span> </p>
+</body>
+</html>

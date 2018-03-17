@@ -1,0 +1,26 @@
+body{
+    background-image: url(../images/end-wallpaper.jpg);
+    text-align: center;
+}
+
+h1{
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+h2{
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+}
+
+p{
+    font-size: 18px;
+    color: #ffffff;
+}
